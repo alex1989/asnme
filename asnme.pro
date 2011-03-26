@@ -17,6 +17,12 @@ HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
 
+# Depending on your system you might not need the -mt suffix for the boos libraries so experiment.
+LIBS += -lmongoclient \
+    -lboost_thread-mt \
+    -lboost_filesystem-mt \
+    -lboost_program_options-mt
+
 OTHER_FILES += \
     README.md \
     LICENSE
