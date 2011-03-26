@@ -19,6 +19,7 @@ along with asnme.  If not, see <http://www.gnu.org/licenses/>.
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "mongoexplorermodel.h"
 
 namespace Ui {
     class MainWindow;

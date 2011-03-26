@@ -11,9 +11,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    mongoexplorermodel.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    mongoexplorermodel.h
 
 FORMS    += mainwindow.ui
 

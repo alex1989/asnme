@@ -22,7 +22,10 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    QCoreApplication::setOrganizationName("Jeffrey Jones");
+    QCoreApplication::setApplicationName("asnme");
     ui->setupUi(this);
+    ui->mongoExplorerView->setModel(new MongoExplorerModel);
 }
 
 MainWindow::~MainWindow()
