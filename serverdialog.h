@@ -18,6 +18,9 @@ public:
     QString get_host();
     QString get_port();
 
+public slots:
+    void checkFields();
+
 private:
     Ui::ServerDialog *ui;
 };

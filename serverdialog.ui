@@ -65,7 +65,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="hostLineEdit"/>
+      <widget class="QLineEdit" name="hostLineEdit">
+       <property name="inputMask">
+        <string/>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -164,5 +168,40 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>hostLineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>ServerDialog</receiver>
+   <slot>checkFields()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>152</x>
+     <y>72</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nameLineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>ServerDialog</receiver>
+   <slot>checkFields()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>18</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>152</x>
+     <y>72</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
+ <slots>
+  <slot>checkFields()</slot>
+ </slots>
 </ui>

@@ -1,3 +1,6 @@
+#include <QPushButton>
+#include <QRegExp>
+#include <QRegExpValidator>
 #include "serverdialog.h"
 #include "ui_serverdialog.h"
 
@@ -6,6 +9,8 @@ ServerDialog::ServerDialog(QWidget *parent) :
     ui(new Ui::ServerDialog)
 {
     ui->setupUi(this);
+    QPushButton *ok = ui->buttonBox->button(QDialogButtonBox::Ok);
+    ok->setDisabled(true);
 }
 
 ServerDialog::~ServerDialog()
@@ -34,5 +39,18 @@ QString ServerDialog::get_port()
     port.setNum(this->ui->portSpinBox->value());
     Q_ASSERT(port > 0);
     return port;
+}
+
+void ServerDialog::checkFields()
+{
+    if( this->ui->nameLineEdit->text().size() > 0 && this->ui->hostLineEdit->text().size() > 0)
+    {
+        this->ui->buttonBox->button(QDialogButtonBox::Ok)->setDisabled(false);
+    }
+    else
+    {
+        this->ui->buttonBox->button(QDialogButtonBox::Ok)->setDisabled(true);
+    }
+
 }
 
