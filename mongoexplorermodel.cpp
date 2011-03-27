@@ -8,3 +8,7 @@ MongoExplorerModel::MongoExplorerModel(QObject *parent) :
     labels.append(tr("Explorer"));
     this->setHorizontalHeaderLabels(labels);
 }
+
+void MongoExplorerModel::updateTree()
+{
+}

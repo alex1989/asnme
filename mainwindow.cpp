@@ -17,18 +17,34 @@ along with asnme.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "serverdialog.h"
+#include "preferences.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    QCoreApplication::setOrganizationName("Jeffrey Jones");
-    QCoreApplication::setApplicationName("asnme");
     ui->setupUi(this);
-    ui->mongoExplorerView->setModel(new MongoExplorerModel);
+    MongoExplorerModel *explorer = new MongoExplorerModel;
+    ui->mongoExplorerView->setModel(explorer);
+    connect(Preferences::instance(),SIGNAL(serversUpdated()),
+            explorer,SLOT(updateTree()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::openServerDialog()
+{
+    ServerDialog serverdialog(this);
+    if (serverdialog.exec())
+    {
+        Preferences* prefs = Preferences::instance();
+        prefs->addServer(serverdialog.get_name(),
+                         serverdialog.get_host(),
+                         serverdialog.get_port());
+
+    }
 }

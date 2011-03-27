@@ -12,12 +12,17 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    mongoexplorermodel.cpp
+    mongoexplorermodel.cpp \
+    preferences.cpp \
+    serverdialog.cpp
 
 HEADERS  += mainwindow.h \
-    mongoexplorermodel.h
+    mongoexplorermodel.h \
+    preferences.h \
+    serverdialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    serverdialog.ui
 
 # Depending on your system you might not need the -mt suffix for the boos libraries so experiment.
 LIBS += -lmongoclient \
@@ -27,4 +32,8 @@ LIBS += -lmongoclient \
 
 OTHER_FILES += \
     README.md \
-    LICENSE
+    LICENSE \
+    icons/server_add.png
+
+RESOURCES += \
+    resources.qrc
