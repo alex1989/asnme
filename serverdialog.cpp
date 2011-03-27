@@ -51,6 +51,5 @@ void ServerDialog::checkFields()
     {
         this->ui->buttonBox->button(QDialogButtonBox::Ok)->setDisabled(true);
     }
-
 }
 

@@ -14,7 +14,6 @@ signals:
 public slots:
     void createCustomContextMenu(QPoint point);
     void deleteServer();
-
 };
 
 #endif // MONGOEXPLORERVIEW_H

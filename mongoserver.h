@@ -11,10 +11,6 @@ public:
     explicit MongoServer(QStringList a_serverSettings);
     ~MongoServer() { delete m_connection; }
 
-signals:
-
-public slots:
-
 private:
     mongo::DBClientConnection *m_connection;
 

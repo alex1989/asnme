@@ -4,6 +4,7 @@
 #include <QDebug>
 #include "mongoexplorerview.h"
 #include "mongoexplorermodel.h"
+#include "mongoexploreraction.h"
 #include "mongoserver.h"
 #include "preferences.h"
 
@@ -33,14 +34,14 @@ void MongoExplorerView::createCustomContextMenu(QPoint point)
 
        if( dynamic_cast<MongoServer*>(item) != NULL)
        {
-           QAction *action_serverConnect = new QAction(tr("&Connect to Server"),this);
-           action_serverConnect->setIcon(QIcon(":icons/server_go"));
-
-           QAction *action_serverDelete = new QAction(tr("&Delete Server"),this);
-           action_serverDelete->setIcon(QIcon(":icons/server_delete"));
            int item_row = item->row();
-           connect(action_serverDelete,SIGNAL(triggered()),
-                   this, SLOT(deleteServer()));
+           MongoExplorerAction *action_serverConnect = new MongoExplorerAction(tr("&Connect to Server"), item_row, this);
+           action_serverConnect->setIcon(QIcon(":icons/server_go"));
+           connect(action_serverConnect,SIGNAL(triggered_with_row(int)),
+                   mem,SLOT(connectToServer(int)));
+
+           MongoExplorerAction *action_serverDelete = new MongoExplorerAction(tr("&Delete Server"), item_row, this);
+           action_serverDelete->setIcon(QIcon(":icons/server_delete"));
 
            QList<QAction *> actions;
            actions.append(action_serverConnect);
@@ -49,5 +50,3 @@ void MongoExplorerView::createCustomContextMenu(QPoint point)
        }
     }
 }
-
-

@@ -1,3 +1,4 @@
+#include <QDebug>
 #include "mongoexplorermodel.h"
 #include "preferences.h"
 #include "mongoserver.h"
@@ -47,4 +48,11 @@ void MongoExplorerModel::updateTree()
             this->appendRow(prefServer);
         }
     }
+}
+
+void MongoExplorerModel::connectToServer(int a_index)
+{
+    qDebug() << "Connecting to Server, index: " << a_index;
+    MongoServer *selectedServer = (MongoServer*)this->item(a_index);
+    qDebug() << "Server ID: " << selectedServer->data(Qt::DisplayRole);
 }

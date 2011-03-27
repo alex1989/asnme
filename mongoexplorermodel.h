@@ -13,6 +13,7 @@ signals:
 
 public slots:
     void updateTree();
+    void connectToServer(int a_index);
 
 };
 

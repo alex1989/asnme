@@ -16,14 +16,16 @@ SOURCES += main.cpp\
     preferences.cpp \
     serverdialog.cpp \
     mongoserver.cpp \
-    mongoexplorerview.cpp
+    mongoexplorerview.cpp \
+    mongoexploreraction.cpp
 
 HEADERS  += mainwindow.h \
     mongoexplorermodel.h \
     preferences.h \
     serverdialog.h \
     mongoserver.h \
-    mongoexplorerview.h
+    mongoexplorerview.h \
+    mongoexploreraction.h
 
 FORMS    += mainwindow.ui \
     serverdialog.ui
