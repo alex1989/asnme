@@ -23,11 +23,23 @@ Preferences* Preferences::instance()
 
 void Preferences::addServer(QString a_name, QString a_host, QString a_port)
 {
-    QStringList server;
-    server.append(a_name);
-    server.append(a_host);
-    server.append(a_port);
-    m_servers.append(server);
-    emit serversUpdated();
+    bool exists = false;
+    foreach(QStringList srv, m_servers)
+    {
+        if(a_host == srv.at(1) && a_port == srv.at(2))
+        {
+            exists = true;
+        }
+    }
+
+    if(exists == false)
+    {
+        QStringList server;
+        server.append(a_name);
+        server.append(a_host);
+        server.append(a_port);
+        m_servers.append(server);
+        emit serversUpdated();
+    }
 }
 

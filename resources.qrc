@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/icons">
         <file alias="server_add">icons/server_add.png</file>
+        <file alias="server">icons/server.png</file>
+        <file alias="server_connect">icons/server_connect.png</file>
     </qresource>
 </RCC>

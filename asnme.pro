@@ -14,12 +14,14 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     mongoexplorermodel.cpp \
     preferences.cpp \
-    serverdialog.cpp
+    serverdialog.cpp \
+    mongoserver.cpp
 
 HEADERS  += mainwindow.h \
     mongoexplorermodel.h \
     preferences.h \
-    serverdialog.h
+    serverdialog.h \
+    mongoserver.h
 
 FORMS    += mainwindow.ui \
     serverdialog.ui
@@ -33,7 +35,8 @@ LIBS += -lmongoclient \
 OTHER_FILES += \
     README.md \
     LICENSE \
-    icons/server_add.png
+    icons/server_add.png \
+    icons/server_connect.png
 
 RESOURCES += \
     resources.qrc
