@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QTreeView" name="mongoExplorerView"/>
+     <widget class="MongoExplorerView" name="mongoExplorerView"/>
     </item>
    </layout>
   </widget>
@@ -60,6 +60,13 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MongoExplorerView</class>
+   <extends>QTreeView</extends>
+   <header location="global">mongoexplorerview.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resources.qrc"/>
  </resources>
