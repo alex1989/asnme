@@ -3,6 +3,7 @@
 MongoServer::MongoServer(QStringList a_serverSettings) :
     QStandardItem()
 {
-    this->setData(a_serverSettings.at(0),Qt::DisplayRole);
-    this->setData(QIcon(":icons/server_connect"),Qt::DecorationRole);
+    setData(a_serverSettings.at(0),Qt::DisplayRole);
+    setData(QIcon(":icons/server_connect"),Qt::DecorationRole);
+    setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 }
