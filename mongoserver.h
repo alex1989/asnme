@@ -9,6 +9,7 @@ class MongoServer : public QStandardItem
 
 public:
     explicit MongoServer(QStringList a_serverSettings);
+    ~MongoServer() { delete m_connection; }
 
 signals:
 

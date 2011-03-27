@@ -19,12 +19,13 @@ void MongoExplorerModel::updateTree()
     QList<QStringList> servers = prefs->servers();
 
     MongoServer *prefServer;
+    MongoServer *treeServer;
 
     // For each of the servers in the preferences
     foreach(QStringList settings, servers)
     {
-        bool exists = false; // Does the
-        MongoServer *treeServer;
+        bool exists = false; // Does the server already exist in the tree
+
 
         // Loop through the servers already in the tree
         // and, if it already exists, update the boolean to show this

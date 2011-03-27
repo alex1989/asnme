@@ -12,6 +12,8 @@ public:
 signals:
 
 public slots:
+    void createCustomContextMenu(QPoint point);
+    void deleteServer();
 
 };
 

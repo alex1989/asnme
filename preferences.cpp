@@ -43,3 +43,20 @@ void Preferences::addServer(QString a_name, QString a_host, QString a_port)
     }
 }
 
+void Preferences::deleteServer(QString a_name)
+{
+    if(m_servers.size() > 0)
+    {
+        for(int i= (m_servers.size() - 1) ; i >= 0; i--)
+        {
+            QStringList server = m_servers.at(i);
+            QString server_name = server.at(i);
+            if(server_name == a_name)
+            {
+               m_servers.removeAt(i);
+            }
+        }
+    }
+    emit serversUpdated();
+}
+

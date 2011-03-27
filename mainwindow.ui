@@ -16,7 +16,11 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="MongoExplorerView" name="mongoExplorerView"/>
+     <widget class="MongoExplorerView" name="mongoExplorerView">
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
