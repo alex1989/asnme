@@ -40,7 +40,8 @@ OTHER_FILES += \
     README.md \
     LICENSE \
     icons/server_add.png \
-    icons/server_connect.png
+    icons/server_connect.png \
+    Doxyfile
 
 RESOURCES += \
     resources.qrc
