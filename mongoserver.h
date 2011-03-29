@@ -21,11 +21,27 @@ along with asnme.  If not, see <http://www.gnu.org/licenses/>.
 #include <QStandardItem>
 #include "mongo/client/dbclient.h"
 
+//!  A representation of a MongoDB Server
+/*!
+  This class is used by the MongoExplorerModel to represent a MongoDB server.
+  This class holds the connection to the server as a private member.
+*/
+
 class MongoServer : public QStandardItem
 {
 
 public:
+    //! Standard constructor
+    /*!
+      This is the standard constructor for this class.
+      \param a_serverSettings a QStringList which contains the name, host and port number for the server in 3 strings
+    */
     explicit MongoServer(QStringList a_serverSettings);
+
+    //! Destructor
+    /*!
+      Destroys the connection to the server
+    */
     ~MongoServer() { delete m_connection; }
 
 private:

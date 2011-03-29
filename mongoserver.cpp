@@ -15,13 +15,6 @@ You should have received a copy of the GNU General Public License
 along with asnme.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-//!  A representation of a MongoDB Server
-/*!
-  This class is used by the MongoExplorerModel to represent a MongoDB server.
-  This class holds the connection to the server as a private member
-*/
-
-
 #include "mongoserver.h"
 
 MongoServer::MongoServer(QStringList a_serverSettings) :
