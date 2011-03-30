@@ -38,6 +38,15 @@ public:
     */
     explicit MongoServer(QStringList a_serverSettings);
 
+    //! Return the current connection to the server
+    /*!
+      \returns a pointer to the server's mongo::DBClientConnection
+    */
+    mongo::DBClientConnection *get_connection() {return m_connection; }
+
+    //! Connect to the MongoDB Server
+    void connect();
+
     //! Destructor
     /*!
       Destroys the connection to the server
@@ -46,6 +55,7 @@ public:
 
 private:
     mongo::DBClientConnection *m_connection;
+    QString m_hostName;
 
 };
 

@@ -69,7 +69,7 @@ void MongoExplorerModel::updateTree()
 
 void MongoExplorerModel::connectToServer(int a_index)
 {
-    qDebug() << "Connecting to Server, index: " << a_index;
     MongoServer *selectedServer = (MongoServer*)this->item(a_index);
-    qDebug() << "Server ID: " << selectedServer->data(Qt::DisplayRole);
+    selectedServer->connect();
+    selectedServer->setData(QIcon(":icons/server"),Qt::DecorationRole);
 }

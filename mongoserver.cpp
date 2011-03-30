@@ -23,4 +23,12 @@ MongoServer::MongoServer(QStringList a_serverSettings) :
     setData(a_serverSettings.at(0),Qt::DisplayRole);
     setData(QIcon(":icons/server_connect"),Qt::DecorationRole);
     setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+    m_hostName = a_serverSettings.at(1);
+}
+
+void MongoServer::connect()
+{
+    m_connection = new mongo::DBClientConnection;
+    m_connection->connect(m_hostName.toStdString());
+    Q_ASSERT(m_connection);
 }
