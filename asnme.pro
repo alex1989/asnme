@@ -17,7 +17,9 @@ SOURCES += main.cpp\
     serverdialog.cpp \
     mongoserver.cpp \
     mongoexplorerview.cpp \
-    mongoexploreraction.cpp
+    mongoexploreraction.cpp \
+    mongodatabase.cpp \
+    mongocollection.cpp
 
 HEADERS  += mainwindow.h \
     mongoexplorermodel.h \
@@ -25,7 +27,9 @@ HEADERS  += mainwindow.h \
     serverdialog.h \
     mongoserver.h \
     mongoexplorerview.h \
-    mongoexploreraction.h
+    mongoexploreraction.h \
+    mongodatabase.h \
+    mongocollection.h
 
 FORMS    += mainwindow.ui \
     serverdialog.ui

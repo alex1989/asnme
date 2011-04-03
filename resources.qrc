@@ -5,5 +5,7 @@
         <file alias="server_connect">icons/server_connect.png</file>
         <file alias="server_delete">icons/server_delete.png</file>
         <file alias="server_go">icons/server_go.png</file>
+        <file alias="database">icons/database.png</file>
+        <file alias="collection">icons/table.png</file>
     </qresource>
 </RCC>

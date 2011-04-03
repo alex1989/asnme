@@ -16,6 +16,7 @@ along with asnme.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "mongoserver.h"
+#include "mongodatabase.h"
 
 MongoServer::MongoServer(QStringList a_serverSettings) :
     QStandardItem()
@@ -31,4 +32,25 @@ void MongoServer::connect()
     m_connection = new mongo::DBClientConnection;
     m_connection->connect(m_hostName.toStdString());
     Q_ASSERT(m_connection);
+
+
+    list<string> mongo_databases;
+
+    mongo_databases = m_connection->getDatabaseNames();
+    MongoDatabase *db;
+
+    int size = (int)mongo_databases.size();
+    for(int i = 0; i < size ; i++)
+    {
+        string str;
+        QString tmp;
+        str = mongo_databases.back();
+        tmp = tmp.fromStdString(str);
+
+        mongo_databases.pop_back();
+        db = new MongoDatabase(tmp);
+        this->appendRow(db);
+        db->createColumns();
+     }
+
 }
