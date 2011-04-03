@@ -12,24 +12,24 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    mongoexplorermodel.cpp \
+    src/mongo-model/mongoexplorermodel.cpp \
     preferences.cpp \
     src/widgets/serverdialog.cpp \
-    mongoserver.cpp \
+    src/mongo-model/mongoserver.cpp \
     src/widgets/mongoexplorerview.cpp \
     mongoexploreraction.cpp \
-    mongodatabase.cpp \
-    mongocollection.cpp
+    src/mongo-model/mongodatabase.cpp \
+    src/mongo-model/mongocollection.cpp
 
 HEADERS  += mainwindow.h \
-    mongoexplorermodel.h \
+    src/mongo-model/mongoexplorermodel.h \
     preferences.h \
     src/widgets/serverdialog.h \
-    mongoserver.h \
+    src/mongo-model/mongoserver.h \
     src/widgets/mongoexplorerview.h \
     mongoexploreraction.h \
-    mongodatabase.h \
-    mongocollection.h
+    src/mongo-model/mongodatabase.h \
+    src/mongo-model/mongocollection.h
 
 FORMS    += mainwindow.ui \
     ui/serverdialog.ui

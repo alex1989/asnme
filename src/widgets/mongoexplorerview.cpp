@@ -20,9 +20,9 @@ along with asnme.  If not, see <http://www.gnu.org/licenses/>.
 #include <QAction>
 #include <QDebug>
 #include "mongoexplorerview.h"
-#include "../../mongoexplorermodel.h"
+#include "../mongo-model/mongoexplorermodel.h"
 #include "../../mongoexploreraction.h"
-#include "../../mongoserver.h"
+#include "../mongo-model/mongoserver.h"
 #include "../../preferences.h"
 
 MongoExplorerView::MongoExplorerView(QWidget *parent) :
