@@ -43,9 +43,14 @@ LIBS += -lmongoclient \
 OTHER_FILES += \
     README.md \
     LICENSE \
-    icons/server_add.png \
-    icons/server_connect.png \
-    Doxyfile
+    Doxyfile \
+    resources/icons/table.png \
+    resources/icons/server.png \
+    resources/icons/server_go.png \
+    resources/icons/server_delete.png \
+    resources/icons/server_connect.png \
+    resources/icons/server_add.png \
+    resources/icons/database.png
 
 RESOURCES += \
-    resources.qrc
+    resources/resources.qrc
