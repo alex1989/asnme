@@ -21,7 +21,7 @@ along with asnme.  If not, see <http://www.gnu.org/licenses/>.
 #include <QDebug>
 #include "mongoexplorerview.h"
 #include "../mongo-model/mongoexplorermodel.h"
-#include "../../mongoexploreraction.h"
+#include "mongoexploreraction.h"
 #include "../mongo-model/mongoserver.h"
 #include "../utils/preferences.h"
 

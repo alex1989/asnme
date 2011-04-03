@@ -17,7 +17,7 @@ SOURCES += src/main.cpp\
         src/widgets/serverdialog.cpp \
         src/mongo-model/mongoserver.cpp \
         src/widgets/mongoexplorerview.cpp \
-        mongoexploreraction.cpp \
+        src/widgets/mongoexploreraction.cpp \
         src/mongo-model/mongodatabase.cpp \
         src/mongo-model/mongocollection.cpp
 
@@ -27,7 +27,7 @@ HEADERS  += src/widgets/mainwindow.h \
         src/widgets/serverdialog.h \
         src/mongo-model/mongoserver.h \
         src/widgets/mongoexplorerview.h \
-        mongoexploreraction.h \
+        src/widgets/mongoexploreraction.h \
         src/mongo-model/mongodatabase.h \
         src/mongo-model/mongocollection.h
 
