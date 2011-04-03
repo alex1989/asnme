@@ -23,7 +23,7 @@ along with asnme.  If not, see <http://www.gnu.org/licenses/>.
 #include "../mongo-model/mongoexplorermodel.h"
 #include "../../mongoexploreraction.h"
 #include "../mongo-model/mongoserver.h"
-#include "../../preferences.h"
+#include "../utils/preferences.h"
 
 MongoExplorerView::MongoExplorerView(QWidget *parent) :
     QTreeView(parent)

@@ -17,7 +17,7 @@ along with asnme.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QDebug>
 #include "mongoexplorermodel.h"
-#include "preferences.h"
+#include "../utils/preferences.h"
 #include "mongoserver.h"
 
 MongoExplorerModel::MongoExplorerModel(QObject *parent) :

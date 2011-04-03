@@ -18,7 +18,7 @@ along with asnme.  If not, see <http://www.gnu.org/licenses/>.
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "serverdialog.h"
-#include "preferences.h"
+#include "../utils/preferences.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

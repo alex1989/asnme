@@ -13,7 +13,7 @@ TEMPLATE = app
 SOURCES += src/main.cpp\
         src/widgets/mainwindow.cpp \
         src/mongo-model/mongoexplorermodel.cpp \
-        preferences.cpp \
+        src/utils/preferences.cpp \
         src/widgets/serverdialog.cpp \
         src/mongo-model/mongoserver.cpp \
         src/widgets/mongoexplorerview.cpp \
@@ -23,7 +23,7 @@ SOURCES += src/main.cpp\
 
 HEADERS  += src/widgets/mainwindow.h \
         src/mongo-model/mongoexplorermodel.h \
-        preferences.h \
+        src/utils/preferences.h \
         src/widgets/serverdialog.h \
         src/mongo-model/mongoserver.h \
         src/widgets/mongoexplorerview.h \
