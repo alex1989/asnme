@@ -52,7 +52,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_AddServer">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="resources/resources.qrc">
      <normaloff>:/icons/server_add</normaloff>:/icons/server_add</iconset>
    </property>
    <property name="text">
@@ -68,11 +68,11 @@
   <customwidget>
    <class>MongoExplorerView</class>
    <extends>QTreeView</extends>
-   <header location="global">mongoexplorerview.h</header>
+   <header location="global">src/widgets/mongoexplorerview.h</header>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="resources.qrc"/>
+  <include location="resources/resources.qrc"/>
  </resources>
  <connections>
   <connection>

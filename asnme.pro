@@ -16,7 +16,7 @@ SOURCES += main.cpp\
     preferences.cpp \
     src/widgets/serverdialog.cpp \
     mongoserver.cpp \
-    mongoexplorerview.cpp \
+    src/widgets/mongoexplorerview.cpp \
     mongoexploreraction.cpp \
     mongodatabase.cpp \
     mongocollection.cpp
@@ -26,7 +26,7 @@ HEADERS  += mainwindow.h \
     preferences.h \
     src/widgets/serverdialog.h \
     mongoserver.h \
-    mongoexplorerview.h \
+    src/widgets/mongoexplorerview.h \
     mongoexploreraction.h \
     mongodatabase.h \
     mongocollection.h
