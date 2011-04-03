@@ -10,28 +10,28 @@ TARGET = asnme
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    src/mongo-model/mongoexplorermodel.cpp \
-    preferences.cpp \
-    src/widgets/serverdialog.cpp \
-    src/mongo-model/mongoserver.cpp \
-    src/widgets/mongoexplorerview.cpp \
-    mongoexploreraction.cpp \
-    src/mongo-model/mongodatabase.cpp \
-    src/mongo-model/mongocollection.cpp
+SOURCES += src/main.cpp\
+        src/widgets/mainwindow.cpp \
+        src/mongo-model/mongoexplorermodel.cpp \
+        preferences.cpp \
+        src/widgets/serverdialog.cpp \
+        src/mongo-model/mongoserver.cpp \
+        src/widgets/mongoexplorerview.cpp \
+        mongoexploreraction.cpp \
+        src/mongo-model/mongodatabase.cpp \
+        src/mongo-model/mongocollection.cpp
 
-HEADERS  += mainwindow.h \
-    src/mongo-model/mongoexplorermodel.h \
-    preferences.h \
-    src/widgets/serverdialog.h \
-    src/mongo-model/mongoserver.h \
-    src/widgets/mongoexplorerview.h \
-    mongoexploreraction.h \
-    src/mongo-model/mongodatabase.h \
-    src/mongo-model/mongocollection.h
+HEADERS  += src/widgets/mainwindow.h \
+        src/mongo-model/mongoexplorermodel.h \
+        preferences.h \
+        src/widgets/serverdialog.h \
+        src/mongo-model/mongoserver.h \
+        src/widgets/mongoexplorerview.h \
+        mongoexploreraction.h \
+        src/mongo-model/mongodatabase.h \
+        src/mongo-model/mongocollection.h
 
-FORMS    += mainwindow.ui \
+FORMS    += ui/mainwindow.ui \
     ui/serverdialog.ui
 
 # Depending on your system you might not need the -mt suffix for the boos libraries so experiment.

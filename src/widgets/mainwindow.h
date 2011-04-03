@@ -15,14 +15,29 @@ You should have received a copy of the GNU General Public License
 along with asnme.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <QtGui/QApplication>
-#include "mainwindow.h"
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+#include <QMainWindow>
+#include "../mongo-model/mongoexplorermodel.h"
 
-    return a.exec();
+namespace Ui {
+    class MainWindow;
 }
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    explicit MainWindow(QWidget *parent = 0);
+    ~MainWindow();
+
+private:
+    Ui::MainWindow *ui;
+
+private slots:
+    void openServerDialog();
+};
+
+#endif // MAINWINDOW_H
