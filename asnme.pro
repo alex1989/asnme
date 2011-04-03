@@ -14,7 +14,7 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     mongoexplorermodel.cpp \
     preferences.cpp \
-    serverdialog.cpp \
+    src/widgets/serverdialog.cpp \
     mongoserver.cpp \
     mongoexplorerview.cpp \
     mongoexploreraction.cpp \
@@ -24,7 +24,7 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     mongoexplorermodel.h \
     preferences.h \
-    serverdialog.h \
+    src/widgets/serverdialog.h \
     mongoserver.h \
     mongoexplorerview.h \
     mongoexploreraction.h \
@@ -32,7 +32,7 @@ HEADERS  += mainwindow.h \
     mongocollection.h
 
 FORMS    += mainwindow.ui \
-    serverdialog.ui
+    ui/serverdialog.ui
 
 # Depending on your system you might not need the -mt suffix for the boos libraries so experiment.
 LIBS += -lmongoclient \
