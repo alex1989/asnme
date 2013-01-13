@@ -1,5 +1,9 @@
 # Asnme
 
+## Current Status
+
+This project is currently inactive due to lack of time and other priorities.
+
 ## What is this?
 
 Asnme is a management application for [MongoDB](http://www.mongodb.org) databases. It is a desktop application written in C++ and Qt and will (eventually) be available on Windows, Linux and Mac.
